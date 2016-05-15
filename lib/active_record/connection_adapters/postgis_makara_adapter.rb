@@ -33,6 +33,11 @@ module ActiveRecord
         end
       end
 
+      # def _appropriate_pool(method_name, args)
+      #   return @master_pool unless Thread.current[:distribute_reads]
+      #   super
+      # end
+
       protected
 
       def active_record_connection_for(config)
